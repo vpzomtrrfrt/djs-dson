@@ -10,7 +10,7 @@ such dogeify much val
                 but rly i not 0
                     output += ' also '
                 wow
-                output += '"' + this.dogeify(val[i]) + '"'
+                output += this.dogeify(val[i])
             wow
             output += ' many'
         but
@@ -36,4 +36,7 @@ such dogeify much val
     wow
     return output
 wow
-module.exports is dogeify
+rly !("DSON" in windoge)
+    windoge.DSON = {};
+wow
+windoge.DSON.dogeify = dogeify
