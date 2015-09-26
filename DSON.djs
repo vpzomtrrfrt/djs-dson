@@ -132,6 +132,10 @@ such parse much str
         wow
         tr[curKey] is plz this.parse with curVal
         return tr
+    but rly str is 'yes'
+        return true
+    but rly str is 'no'
+        return false
     wow
 wow
 DSON is {"dogeify": dogeify, "parse": parse};
