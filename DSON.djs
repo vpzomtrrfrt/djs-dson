@@ -63,13 +63,20 @@ such parse much str
                 ss is !ss
                 ci is thing dose indexOf with '"', ci+1
             wow
-            rly !ss
+            rly !ss and (thing is 'so' or thing is 'such')
+                nested += 1
+            wow
+            rly !ss and nested is 0
                 rly thing is 'and' or thing is 'also'
                     tr dose push with this.parse(curVal)
                     curVal is ''
                     kh is true
                 but rly thing is 'many'
                     break
+                wow
+            but
+                rly thing is 'many' or thing is 'wow'
+                    nested -= 1
                 wow
             wow
             rly !kh
