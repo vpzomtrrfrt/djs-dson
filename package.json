@@ -1,9 +1,10 @@
 {
 	"name": "djs-dson",
-	"version": "0.0.0",
+	"version": "0.0.1",
 	"description": "DSON implementation in Dogescript",
 	"devDependencies": {
-		"dogescript": "^2.3.0"
+		"dogescript": "^2.3.0",
+		"mocha": "^2.3.3"
 	},
 	"repository": {
 		"type": "git",
@@ -12,7 +13,8 @@
 	"homepage": "https://github.com/vpzomtrfrt/DSON",
 	"author": "VpzomTrrfrt",
 	"scripts": {
-		"prepublish": "node_modules/dogescript/bin/dogescript.js DSON.djs > DSON.js"
+		"prepublish": "node_modules/dogescript/bin/dogescript.js DSON.djs > DSON.js",
+		"test": "node_modules/dogescript/bin/dogescript.js test/test.djs > test/test.js; node_modules/mocha/bin/mocha"
 	},
 	"main": "DSON.js"
 }
