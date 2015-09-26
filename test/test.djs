@@ -41,6 +41,9 @@ plz describe with 'DSON', much
         plz it with 'Object' much
             assert.deepEqual(DSON.parse('such "foo" is "bar", "pop" is "corn", "cat" is "not a doge" wow'), {'foo': 'bar', 'pop': 'corn', 'cat': 'not a doge'})
             assert.deepEqual(DSON.parse('such "num" is 1, "str" is "hi", "bool" is yes wow'), {'num': 1, 'str': 'hi', 'bool': true})
+            assert.deepEqual(DSON.parse('such "foo" is "bar". "pop" is "corn" wow'), {'foo': 'bar', 'pop': 'corn'})
+            assert.deepEqual(DSON.parse('such "foo" is "bar"! "pop" is "corn" wow'), {'foo': 'bar', 'pop': 'corn'})
+            assert.deepEqual(DSON.parse('such "foo" is "bar"? "pop" is "corn" wow'), {'foo': 'bar', 'pop': 'corn'})
         wow&
         plz it with 'Array' much
             assert.deepEqual(DSON.parse('so 0 also 1 and 2 many'), [0,1,2])

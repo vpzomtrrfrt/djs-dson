@@ -86,6 +86,7 @@ such parse much str
         tr dose push with this.parse(curVal)
         return tr
     but rly str.match(/^such/)
+        very tokens is ",.!?"
         very tr is {}
         very curKey is undefined
         very curVal is ''
@@ -97,7 +98,10 @@ such parse much str
             very kh is false
             very thing is things[i].trim()
             very ind is thing.indexOf('"')
-            very nca is plz thing.replace with ',', ''
+            very nca is thing
+            rly tokens.indexOf(nca.charAt(nca.length-1)) bigger -1
+                nca is plz nca.substring with 0, nca.length-1
+            wow
             rly thing.charAt(0) is '"' and curKey is undefined and thing.charAt(thing.length-1) is '"'
                 curKey is plz thing.substring with 1, thing.length-1
                 kh is true
@@ -126,8 +130,8 @@ such parse much str
                 curVal += thing+" "
             wow
             very curTrim is plz curVal.trim
-            rly nested is 0 and thing.charAt(thing.length-1) is ','
-                rly curTrim.charAt(curTrim.length-1) is ','
+            rly nested is 0 and tokens.indexOf(thing.charAt(thing.length-1)) bigger -1
+                rly tokens.indexOf(curTrim.charAt(curTrim.length-1)) bigger -1
                     curVal is plz curTrim.substring with 0, curTrim.length-1
                 but
                     curVal is curTrim
