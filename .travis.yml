@@ -8,3 +8,4 @@ deploy:
   file: DSON.js
   on:
     repo: vpzomtrrfrt/DSON
+  all_branches: true
