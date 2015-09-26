@@ -116,7 +116,7 @@ such parse much str
             but rly nca is "wow" or nca is "many"
                 rly nested bigger 0
                     nested -= 1
-                    rly nca is "wow"
+                    rly nested is 0
                         kh is true
                     wow
                 but

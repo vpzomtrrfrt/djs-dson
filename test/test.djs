@@ -23,7 +23,7 @@ plz describe with 'DSON', much
             assert.equal('no', DSON.dogeify(false))
         wow&
         plz it with 'Nested object' much
-            assert.equal('such "obj" is such "foo" is "bar", "cat" is "not a doge" wow wow', DSON.dogeify({obj: {'foo': 'bar', 'cat': 'not a doge'}}))
+            assert.equal('such "obj" is such "foo" is "bar", "cat" is "not a doge" wow, "obj2" is such "pop" is "corn" wow wow', DSON.dogeify({obj: {'foo': 'bar', 'cat': 'not a doge'}, obj2: {'pop': 'corn'}}))
         wow&
         plz it with 'Nested array' much
             assert.equal('so so "THIS" also "IS" and "DOGESCRIPT" many and so 0 also 1 and 2 many many', DSON.dogeify([['THIS', 'IS', 'DOGESCRIPT'], [0,1,2]]))
@@ -54,7 +54,7 @@ plz describe with 'DSON', much
             assert.equal(DSON.parse('no'), false)
         wow&
         plz it with 'Nested object' much
-            assert.deepEqual(DSON.parse('such "obj" is such "foo" is "bar", "cat" is "not a doge" wow wow'), {obj: {'foo': 'bar', 'cat': 'not a doge'}})
+            assert.deepEqual(DSON.parse('such "obj" is such "foo" is "bar", "cat" is "not a doge" wow, "obj2" is such "pop" is "corn" wow wow'), {obj: {'foo': 'bar', 'cat': 'not a doge'}, obj2: {'pop': 'corn'}})
         wow&
         plz it with 'Nested array' much
             assert.deepEqual(DSON.parse('so so "THIS" also "IS" and "DOGESCRIPT" many and so 0 also 1 and 2 many many'), [['THIS', 'IS', 'DOGESCRIPT'], [0,1,2]])
