@@ -1,6 +1,6 @@
 {
 	"name": "djs-dson",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "DSON implementation in Dogescript",
 	"devDependencies": {
 		"dogescript": "^2.3.0",
