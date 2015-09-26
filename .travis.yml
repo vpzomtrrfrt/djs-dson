@@ -5,7 +5,9 @@ deploy:
   provider: releases
   api_key:
     secure: uqmz5U73JdqtmqXKfAJfpUvq1/BRTOIE6IMBL1mq0C7NqnkWREjNPg7OgkV0/vSH0q+FbKhNAIc9Fm6ezxlkrrzCYbqsToy8H8ZQ6GP8Qn01nzGojd1LAvTOSo98q04Xe8VZFhbpnocnKWkeJYQ2DcHvb4jQX6ncZ1B/sxVAe2FSJuQiwdwH9q8XLwCJIH1a+frvAUYhR6Tan8OnKd+sVH5QP39RD/tU2jNv13Jr/OdPqkpVjvqQGSFKp2wdok1PSE8w7iSO1kHgJ2cu14pPrS3jH90UZXevzz0FRjeNIyWlxhFvuQHdiXD0bBwiyV/Jj2vplAgT98J2dGsBPAomQQIOCS2565C8pz9pIsA/ZSOKyvLGCDzrkztKtMB3piDC6ZrtZOb/q++50ICbFd/yy3Ed9b/VN0PF+bJG+uCLgkdKGy+1ju6RjytjgkCa+6jazIq+u4W4ADPaGgeEcQHB/W4XjJI3WIh6HIGhXQgwDL4IABGaPc/AKkXSHP2IQ6JHTPw73G+/zeC27GIWDW5S/se6rI6yjao3iz3dIsEVql9pBxqDlX4OwlMGSSPnQ8iLCfzkgv1WT2IA9P01AoUfWYiXBMPq2RoHJ/bhpl64mJ/4Ia8atQi7H7VLo8TC9lrK9M51JgKjC3kSFvlWcLa7YUhW8uZkvye/IpRD3C0JeiU=
-  file: DSON.js
+  file:
+    - "DSON.js"
+    - "DSON.djs"
   on:
     repo: vpzomtrrfrt/DSON
     all_branches: true
