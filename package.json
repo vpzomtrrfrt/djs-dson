@@ -1,20 +1,28 @@
 {
-	"name": "djs-dson",
-	"version": "0.0.2",
-	"description": "DSON implementation in Dogescript",
-	"devDependencies": {
-		"dogescript": "^2.3.0",
-		"mocha": "^2.3.3"
-	},
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/vpzomtrrfrt/DSON.git"
-	},
-	"homepage": "https://github.com/vpzomtrfrt/DSON",
-	"author": "VpzomTrrfrt",
-	"scripts": {
-		"prepublish": "node_modules/dogescript/bin/dogescript.js DSON.djs > DSON.js",
-		"test": "node_modules/dogescript/bin/dogescript.js test/test.djs > test/test.js; node_modules/mocha/bin/mocha"
-	},
-	"main": "DSON.js"
+  "name": "djs-dson",
+  "version": "0.0.2",
+  "description": "DSON implementation in Dogescript",
+  "devDependencies": {
+    "blanket": "^1.2.0",
+    "coveralls": "^2.11.4",
+    "dogescript": "^2.3.0",
+    "mocha": "^2.3.3",
+    "mocha-lcov-reporter": "^1.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vpzomtrrfrt/DSON.git"
+  },
+  "homepage": "https://github.com/vpzomtrfrt/DSON",
+  "author": "VpzomTrrfrt",
+  "scripts": {
+    "prepublish": "node_modules/dogescript/bin/dogescript.js DSON.djs > DSON.js",
+    "test": "mkdir test_build; node_modules/dogescript/bin/dogescript.js test/test.djs > test/test.js; node_modules/mocha/bin/mocha --require blanket -R mocha-lcov-reporter | node_modules/coveralls/bin/coveralls.js"
+  },
+  "config": {
+    "blanket": {
+      "pattern": ["DSON.js", "test_build"]
+    }
+  },
+  "main": "DSON.js"
 }
